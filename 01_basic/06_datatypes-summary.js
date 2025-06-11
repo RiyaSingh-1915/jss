@@ -35,3 +35,23 @@ console.log(typeof myFunction);
 console.log(typeof heros);
 console.log(typeof anotherId);
 
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive) copy , Heap (Non-Primitive) reference
+let myYoutubename = "riyasingh.com"
+
+let anothername = myYoutubename
+anothername = "panda and dumbo"
+
+console.log(myYoutubename);
+console.log(anothername);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+userTwo.email = "riya@google.com"
+console.log(userOne.email);
+console.log(userTwo.email);
