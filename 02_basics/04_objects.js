@@ -45,11 +45,37 @@ const users = [
     },
 ]
 users[1].email
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));
-console.log(tinderUser.hasOwnProperty('isLogged'));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser.hasOwnProperty('isLogged'));
+
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructure: "riya"
+}
+//  course.courseInstructure
+
+const {courseInstructure: instructor} = course
+
+// console.log(courseInstructure);
+console.log(instructor);
+
+// {
+//     "name": "riya",
+//     "coursename": "js in hindi",
+//     "price": "free"
+// }
+
+[
+    {},
+    {},
+    {}
+]
+// random user me api 
+//json formatter to convert api to code ,text etc.
