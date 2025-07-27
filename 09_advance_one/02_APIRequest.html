@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub User Info</title>
+  <style>
+    body {
+      background-color: #8a2be2;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    img {
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #ffffff;
+      color: #8a2be2;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    #info {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>GitHub User Info</h1>
+  <button onclick="fetchGitHubUser()">Get Hitesh's Info</button>
+
+  <div id="info"></div>
+
+  <script>
+    function fetchGitHubUser() {
+      const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+      const xhr = new XMLHttpRequest();
+
+      xhr.open('GET', requestUrl);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          const data = JSON.parse(this.responseText);
+
+          // Display followers count and avatar
+          document.getElementById('info').innerHTML = `
+            <h2>Followers: ${data.followers}</h2>
+            <img src="${data.avatar_url}" alt="Profile Photo" width="150" height="150" />
+          `;
+        }
+      };
+
+      xhr.send();
+    }
+  </script>
+
+</body>
+</html>
