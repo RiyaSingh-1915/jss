@@ -98,12 +98,14 @@ consumePromiseFive()
 // getAllUsers()
 
 
-fetch ("https://jsonplaceholder.typicode.com/users")
+fetch ("https://jsonplaceholder.typicode.com/users")      //fetch 2 types  1. data   ,onfield []  on rejection []  2. web browser/node, network request
 .then((response) => {
-    return response.json()
+    return response.json()       //response = fetch('something)
 })
 .then((data) => {
     console.log(data);
 
 })
 .catch((error) => console.log(error))
+
+//404 error is encountered in on field []
